@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>SampleDB</Name>
+    <Name>DacpacDemo2012</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{109b3ac8-3dac-4b1d-b9b5-04103989ac0d}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <ProjectGuid>{9a032fe0-60f9-4fcc-a1dc-2556e22dcbc8}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>SampleDB</RootNamespace>
-    <AssemblyName>SampleDB</AssemblyName>
+    <RootNamespace>DacpacDemo2012</RootNamespace>
+    <AssemblyName>DacpacDemo2012</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -23,7 +23,6 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
-    <GenerateCreateScript>False</GenerateCreateScript>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -60,12 +59,11 @@
     <Folder Include="Properties" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Confuguration.sql" />
-    <Build Include="PR_InsertConfiguruation.sql" />
-    <Build Include="PR_UpdateConfiguration.sql" />
-    <Build Include="PR_DeleteConfiguration.sql" />
+    <Build Include="tbl_ServiceMaster.sql" />
+    <Build Include="tbl_ServiceObject.sql" />
+    <Build Include="tbl_Employee.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="SampleDB.publish.xml" />
+    <None Include="DacpacDemo2012.publish.xml" />
   </ItemGroup>
 </Project>
