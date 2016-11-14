@@ -23,6 +23,8 @@
     <SqlServerVerification>False</SqlServerVerification>
     <IncludeCompositeObjects>True</IncludeCompositeObjects>
     <TargetDatabaseSet>True</TargetDatabaseSet>
+    <GenerateCreateScript>False</GenerateCreateScript>
+    <DacVersion>1.0.0.1</DacVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -63,6 +65,7 @@
     <Build Include="tbl_ServiceObject.sql" />
     <Build Include="tbl_Employee.sql" />
     <Build Include="PR_CreateEmployee.sql" />
+    <Build Include="PR_UpdateEmployee.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DacpacDemo2012.publish.xml" />
