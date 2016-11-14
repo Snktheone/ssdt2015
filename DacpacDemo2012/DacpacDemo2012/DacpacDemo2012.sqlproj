@@ -62,6 +62,7 @@
     <Build Include="tbl_ServiceMaster.sql" />
     <Build Include="tbl_ServiceObject.sql" />
     <Build Include="tbl_Employee.sql" />
+    <Build Include="PR_CreateEmployee.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DacpacDemo2012.publish.xml" />
