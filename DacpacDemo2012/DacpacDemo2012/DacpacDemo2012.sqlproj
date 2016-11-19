@@ -25,6 +25,8 @@
     <TargetDatabaseSet>True</TargetDatabaseSet>
     <GenerateCreateScript>False</GenerateCreateScript>
     <DacVersion>1.0.0.1</DacVersion>
+    <DacDescription>
+    </DacDescription>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -66,6 +68,7 @@
     <Build Include="tbl_Employee.sql" />
     <Build Include="PR_CreateEmployee.sql" />
     <Build Include="PR_UpdateEmployee.sql" />
+    <Build Include="tbl_Department.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DacpacDemo2012.publish.xml" />
