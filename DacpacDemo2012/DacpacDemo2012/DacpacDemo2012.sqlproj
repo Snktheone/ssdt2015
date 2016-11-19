@@ -69,6 +69,7 @@
     <Build Include="PR_CreateEmployee.sql" />
     <Build Include="PR_UpdateEmployee.sql" />
     <Build Include="tbl_Department.sql" />
+    <Build Include="tbl_Region.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DacpacDemo2012.publish.xml" />

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[tbl_Region]
+(
+	[RegionId] INT NOT NULL PRIMARY KEY,
+	[Region] VARCHAR(50) NOT NULL CONSTRAINT  DF_REGION DEFAULT 'EMEA'
+
+)
