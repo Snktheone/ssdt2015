@@ -119,61 +119,37 @@
   </resheader>
   <data name="dbo_PR_CreateEmployeeTest_TestAction.SqlScript" xml:space="preserve">
     <value>-- database unit test for dbo.PR_CreateEmployee
+
 DECLARE @RC AS INT, @EmployeeId AS INT, @Employee_FirstName AS VARCHAR (255), @Employee_LastName AS VARCHAR (255), @Employee_Gender AS CHAR (1), @Employee_DateofBirth AS DATETIME, @Employee_HireDate AS DATETIME, @Employee_Designation AS VARCHAR (255), @Employee_DepartmentID AS INT, @Employee_ManagerID AS INT;
 
-SELECT @RC = 0,
-       @EmployeeId = 0,
-       @Employee_FirstName = NULL,
-       @Employee_LastName = NULL,
-       @Employee_Gender = NULL,
-       @Employee_DateofBirth = getdate(),
-       @Employee_HireDate = getdate(),
-       @Employee_Designation = NULL,
-       @Employee_DepartmentID = 0,
-       @Employee_ManagerID = 0;
+SET @RC = 0;
+
+SET @EmployeeId = 70001;
+SET @Employee_FirstName = 'Sam';
+SET @Employee_LastName = 'Smith';
+SET @Employee_Gender = 'M';
+SET @Employee_DateofBirth = '19700823';
+SET @Employee_HireDate = '20100101';
+SET @Employee_Designation = 'Manager';
+SET @Employee_DepartmentID = 1111;
+SET @Employee_ManagerID = 70001;
+
+
 
 EXECUTE @RC = [dbo].[PR_CreateEmployee] @EmployeeId, @Employee_FirstName, @Employee_LastName, @Employee_Gender, @Employee_DateofBirth, @Employee_HireDate, @Employee_Designation, @Employee_DepartmentID, @Employee_ManagerID;
 
-SELECT @RC AS RC;
+SELECT EmployeeId, Employee_FirstName, Employee_LastName, Employee_Gender, Employee_DateofBirth, Employee_HireDate, Employee_Designation, Employee_DepartmentID, Employee_ManagerID FROM dbo.tbl_Employee WHERE EmployeeId= 70001
 
 </value>
   </data>
-  <metadata name="TestDataExists.Configuration" xml:space="preserve">
-    <value>Press to configure</value>
-  </metadata>
   <data name="testInitializeAction.SqlScript" xml:space="preserve">
-    <value>/*
-Prepare Data for Test
-*/
-
-DECLARE @EmployeeId AS INT, @Employee_FirstName AS VARCHAR (255), @Employee_LastName AS VARCHAR (255), @Employee_Gender AS CHAR (1),
-        @Employee_DateofBirth AS DATETIME, @Employee_HireDate AS DATETIME, @Employee_Designation AS VARCHAR (255), 
-		@Employee_DepartmentID AS INT, @Employee_ManagerID AS INT;
-
-SET @EmployeeId = 10000;
-SET @Employee_FirstName = 'John';
-SET @Employee_LastName = 'Anthony';
-SET @Employee_Gender = 'M';
-SET @Employee_DateofBirth = '19800823';
-SET @Employee_HireDate = '20150101';
-SET @Employee_Designation = 'Developer';
-SET @Employee_DepartmentID = 1111;
-SET @Employee_ManagerID = 70001;
- 
-SELECT 
-        @EmployeeId AS EmployeeId, 
-		@Employee_FirstName AS Employee_FirstName, 
-		@Employee_LastName AS Employee_LastName, 
-		@Employee_Gender AS Employee_Gender, 
-		@Employee_DateofBirth AS Employee_DateofBirth, 
-		@Employee_HireDate AS Employee_HireDate, 
-		@Employee_Designation AS Employee_Designation, 
-		@Employee_DepartmentID AS Employee_DepartmentID, 
-		@Employee_ManagerID AS Employee_ManagerID
-
-
-
-DELETE FROM dbo.tbl_Employee WHERE EmployeeId = @EmployeeId</value>
+    <value />
+  </data>
+  <data name="dbo_PR_CreateEmployeeTest_PretestAction.SqlScript" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dbo_PR_CreateEmployeeTest_PosttestAction.SqlScript" xml:space="preserve">
+    <value />
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

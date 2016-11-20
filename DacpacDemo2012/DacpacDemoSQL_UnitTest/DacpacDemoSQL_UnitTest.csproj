@@ -100,10 +100,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="SqlDatabaseSetup.cs" />
-    <Compile Include="Test_PR_CreateEmployee.cs">
+    <Compile Include="Test_Negative_PR_CreateEmployee.cs">
       <SubType>Designer</SubType>
     </Compile>
-    <Compile Include="Test_PR_UpdateEmployee.cs">
+    <Compile Include="Test_PR_CreateEmployee.cs">
       <SubType>Designer</SubType>
     </Compile>
     <Compile Include="UnitTest1.cs" />
@@ -114,11 +114,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Test_Negative_PR_CreateEmployee.resx">
+      <DependentUpon>Test_Negative_PR_CreateEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Test_PR_CreateEmployee.resx">
       <DependentUpon>Test_PR_CreateEmployee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test_PR_UpdateEmployee.resx">
-      <DependentUpon>Test_PR_UpdateEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Choose>

@@ -39,44 +39,21 @@ namespace DacpacDemoSQL_UnitTest
         {
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_TestAction;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_PR_CreateEmployee));
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition inconclusiveCondition1;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testInitializeAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ChecksumCondition TestDataExists;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testInitializeAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_PretestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_PosttestAction;
             this.dbo_PR_CreateEmployeeTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             dbo_PR_CreateEmployeeTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            inconclusiveCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition();
-            testInitializeAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            TestDataExists = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ChecksumCondition();
             rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
-            // 
-            // dbo_PR_CreateEmployeeTestData
-            // 
-            this.dbo_PR_CreateEmployeeTestData.PosttestAction = null;
-            this.dbo_PR_CreateEmployeeTestData.PretestAction = null;
-            this.dbo_PR_CreateEmployeeTestData.TestAction = dbo_PR_CreateEmployeeTest_TestAction;
+            testInitializeAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            dbo_PR_CreateEmployeeTest_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            dbo_PR_CreateEmployeeTest_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             // 
             // dbo_PR_CreateEmployeeTest_TestAction
             // 
-            dbo_PR_CreateEmployeeTest_TestAction.Conditions.Add(inconclusiveCondition1);
+            dbo_PR_CreateEmployeeTest_TestAction.Conditions.Add(rowCountCondition1);
             resources.ApplyResources(dbo_PR_CreateEmployeeTest_TestAction, "dbo_PR_CreateEmployeeTest_TestAction");
-            // 
-            // inconclusiveCondition1
-            // 
-            inconclusiveCondition1.Enabled = true;
-            inconclusiveCondition1.Name = "inconclusiveCondition1";
-            // 
-            // testInitializeAction
-            // 
-            testInitializeAction.Conditions.Add(TestDataExists);
-            testInitializeAction.Conditions.Add(rowCountCondition1);
-            resources.ApplyResources(testInitializeAction, "testInitializeAction");
-            // 
-            // TestDataExists
-            // 
-            TestDataExists.Checksum = "-1929658088";
-            TestDataExists.Enabled = true;
-            TestDataExists.Name = "TestDataExists";
             // 
             // rowCountCondition1
             // 
@@ -84,6 +61,24 @@ namespace DacpacDemoSQL_UnitTest
             rowCountCondition1.Name = "rowCountCondition1";
             rowCountCondition1.ResultSet = 1;
             rowCountCondition1.RowCount = 1;
+            // 
+            // testInitializeAction
+            // 
+            resources.ApplyResources(testInitializeAction, "testInitializeAction");
+            // 
+            // dbo_PR_CreateEmployeeTest_PretestAction
+            // 
+            resources.ApplyResources(dbo_PR_CreateEmployeeTest_PretestAction, "dbo_PR_CreateEmployeeTest_PretestAction");
+            // 
+            // dbo_PR_CreateEmployeeTest_PosttestAction
+            // 
+            resources.ApplyResources(dbo_PR_CreateEmployeeTest_PosttestAction, "dbo_PR_CreateEmployeeTest_PosttestAction");
+            // 
+            // dbo_PR_CreateEmployeeTestData
+            // 
+            this.dbo_PR_CreateEmployeeTestData.PosttestAction = dbo_PR_CreateEmployeeTest_PosttestAction;
+            this.dbo_PR_CreateEmployeeTestData.PretestAction = dbo_PR_CreateEmployeeTest_PretestAction;
+            this.dbo_PR_CreateEmployeeTestData.TestAction = dbo_PR_CreateEmployeeTest_TestAction;
             // 
             // Test_PR_CreateEmployee
             // 

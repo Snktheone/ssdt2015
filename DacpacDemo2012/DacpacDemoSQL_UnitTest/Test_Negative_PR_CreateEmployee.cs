@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace DacpacDemoSQL_UnitTest
 {
     [TestClass()]
-    public class Test_PR_UpdateEmployee : SqlDatabaseTestClass
+    public class Test_Negative_PR_CreateEmployee : SqlDatabaseTestClass
     {
 
-        public Test_PR_UpdateEmployee()
+        public Test_Negative_PR_CreateEmployee()
         {
             InitializeComponent();
         }
@@ -37,43 +37,36 @@ namespace DacpacDemoSQL_UnitTest
         /// </summary>
         private void InitializeComponent()
         {
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_UpdateEmployeeTest_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_PR_UpdateEmployee));
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition inconclusiveCondition1;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_UpdateEmployeeTest_PretestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ChecksumCondition DataExists;
-            this.dbo_PR_UpdateEmployeeTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
-            dbo_PR_UpdateEmployeeTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            inconclusiveCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.InconclusiveCondition();
-            dbo_PR_UpdateEmployeeTest_PretestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            DataExists = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ChecksumCondition();
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_TestAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_PosttestAction;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Negative_PR_CreateEmployee));
+            this.dbo_PR_CreateEmployeeTestData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
+            dbo_PR_CreateEmployeeTest_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
+            dbo_PR_CreateEmployeeTest_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             // 
-            // dbo_PR_UpdateEmployeeTest_TestAction
+            // dbo_PR_CreateEmployeeTestData
             // 
-            dbo_PR_UpdateEmployeeTest_TestAction.Conditions.Add(inconclusiveCondition1);
-            resources.ApplyResources(dbo_PR_UpdateEmployeeTest_TestAction, "dbo_PR_UpdateEmployeeTest_TestAction");
+            this.dbo_PR_CreateEmployeeTestData.PosttestAction = dbo_PR_CreateEmployeeTest_PosttestAction;
+            this.dbo_PR_CreateEmployeeTestData.PretestAction = null;
+            this.dbo_PR_CreateEmployeeTestData.TestAction = dbo_PR_CreateEmployeeTest_TestAction;
             // 
-            // inconclusiveCondition1
+            // dbo_PR_CreateEmployeeTest_TestAction
             // 
-            inconclusiveCondition1.Enabled = true;
-            inconclusiveCondition1.Name = "inconclusiveCondition1";
+            dbo_PR_CreateEmployeeTest_TestAction.Conditions.Add(rowCountCondition1);
+            resources.ApplyResources(dbo_PR_CreateEmployeeTest_TestAction, "dbo_PR_CreateEmployeeTest_TestAction");
             // 
-            // dbo_PR_UpdateEmployeeTestData
+            // rowCountCondition1
             // 
-            this.dbo_PR_UpdateEmployeeTestData.PosttestAction = null;
-            this.dbo_PR_UpdateEmployeeTestData.PretestAction = dbo_PR_UpdateEmployeeTest_PretestAction;
-            this.dbo_PR_UpdateEmployeeTestData.TestAction = dbo_PR_UpdateEmployeeTest_TestAction;
+            rowCountCondition1.Enabled = true;
+            rowCountCondition1.Name = "rowCountCondition1";
+            rowCountCondition1.ResultSet = 1;
+            rowCountCondition1.RowCount = 1;
             // 
-            // dbo_PR_UpdateEmployeeTest_PretestAction
+            // dbo_PR_CreateEmployeeTest_PosttestAction
             // 
-            dbo_PR_UpdateEmployeeTest_PretestAction.Conditions.Add(DataExists);
-            resources.ApplyResources(dbo_PR_UpdateEmployeeTest_PretestAction, "dbo_PR_UpdateEmployeeTest_PretestAction");
-            // 
-            // DataExists
-            // 
-            DataExists.Checksum = "-1929658088";
-            DataExists.Enabled = true;
-            DataExists.Name = "DataExists";
+            resources.ApplyResources(dbo_PR_CreateEmployeeTest_PosttestAction, "dbo_PR_CreateEmployeeTest_PosttestAction");
         }
 
         #endregion
@@ -94,9 +87,9 @@ namespace DacpacDemoSQL_UnitTest
         #endregion
 
         [TestMethod()]
-        public void dbo_PR_UpdateEmployeeTest()
+        public void dbo_PR_CreateEmployeeTest()
         {
-            SqlDatabaseTestActions testActions = this.dbo_PR_UpdateEmployeeTestData;
+            SqlDatabaseTestActions testActions = this.dbo_PR_CreateEmployeeTestData;
             // Execute the pre-test script
             // 
             System.Diagnostics.Trace.WriteLineIf((testActions.PretestAction != null), "Executing pre-test script...");
@@ -116,6 +109,6 @@ namespace DacpacDemoSQL_UnitTest
                 SqlExecutionResult[] posttestResults = TestService.Execute(this.PrivilegedContext, this.PrivilegedContext, testActions.PosttestAction);
             }
         }
-        private SqlDatabaseTestActions dbo_PR_UpdateEmployeeTestData;
+        private SqlDatabaseTestActions dbo_PR_CreateEmployeeTestData;
     }
 }
