@@ -2,5 +2,7 @@
 (
 	[ServiceId] INT NOT NULL PRIMARY KEY,
 	[ServiceName] VARCHAR(255) NOT NULL,
-	[ServiceDependentObjectID] INT NOT NULL 
+	[ServiceDependentObjectID] INT NOT NULL,
+	[ModifiedDate] DateTime NOT NULL default GETDATE()
+
 )
