@@ -118,8 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction.SqlScript" xml:space="preserve">
-    <value>-- database unit test for dbo.PR_CreateEmployee
-
+    <value>
 DECLARE @RC AS INT, @EmployeeId AS INT, @Employee_FirstName AS VARCHAR (255), @Employee_LastName AS VARCHAR (255), @Employee_Gender AS CHAR (1), @Employee_DateofBirth AS DATETIME, @Employee_HireDate AS DATETIME, @Employee_Designation AS VARCHAR (255), @Employee_DepartmentID AS INT, @Employee_ManagerID AS INT;
 
 SET @RC = 0;
@@ -143,25 +142,21 @@ SELECT EmployeeId, Employee_FirstName, Employee_LastName, Employee_Gender, Emplo
 
 </value>
   </data>
-  <data name="dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction.SqlScript" xml:space="preserve">
-    <value />
-  </data>
-  <data name="testCleanupAction.SqlScript" xml:space="preserve">
+  <data name="testInitializeAction.SqlScript" xml:space="preserve">
     <value>/*
-Add SQL statements here that you want to run after 
+Add SQL statements here that you want to run before 
 each test method (unit test) in this test class is run.
 
 In the lower pane, you can add test conditions that verify 
 whether the results of your SQL statements match what 
 you expect.
 */
-
 DELETE FROM dbo.tbl_Employee WHERE EmployeeId= 10001
 </value>
   </data>
-  <data name="testInitializeAction.SqlScript" xml:space="preserve">
+  <data name="testCleanupAction.SqlScript" xml:space="preserve">
     <value>/*
-Add SQL statements here that you want to run before 
+Add SQL statements here that you want to run after 
 each test method (unit test) in this test class is run.
 
 In the lower pane, you can add test conditions that verify 

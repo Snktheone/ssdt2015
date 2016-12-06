@@ -7,13 +7,13 @@ using Microsoft.Data.Tools.Schema.Sql.UnitTesting;
 using Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace DacpacDemoSQL_UnitTest
+namespace dbo_PR_CreateEmployee_ROWCOUNT
 {
     [TestClass()]
-    public class Test_Negative_PR_CreateEmployee : SqlDatabaseTestClass
+    public class SqlServerUnitTest1 : SqlDatabaseTestClass
     {
 
-        public Test_Negative_PR_CreateEmployee()
+        public SqlServerUnitTest1()
         {
             InitializeComponent();
         }
@@ -38,39 +38,43 @@ namespace DacpacDemoSQL_UnitTest
         private void InitializeComponent()
         {
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Test_Negative_PR_CreateEmployee));
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
-            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testCleanupAction;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SqlServerUnitTest1));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testInitializeAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testCleanupAction;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition1;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition scalarValueCondition2;
+            Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.NotEmptyResultSetCondition notEmptyResultSetCondition1;
             this.dbo_PR_CreateEmployeeTest_ROWCOUNTData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             this.dbo_PR_CreateEmployeeTest_SCALARVALUEData = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestActions();
             dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
-            rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
-            testCleanupAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             testInitializeAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            testCleanupAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
+            rowCountCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition();
             dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction();
             scalarValueCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
             scalarValueCondition2 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.ScalarValueCondition();
+            notEmptyResultSetCondition1 = new Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.NotEmptyResultSetCondition();
             // 
             // dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction
             // 
             dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction.Conditions.Add(rowCountCondition1);
             resources.ApplyResources(dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction, "dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction");
             // 
-            // dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction
-            // 
-            resources.ApplyResources(dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction, "dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction");
-            // 
             // dbo_PR_CreateEmployeeTest_ROWCOUNTData
             // 
-            this.dbo_PR_CreateEmployeeTest_ROWCOUNTData.PosttestAction = dbo_PR_CreateEmployeeTest_ROWCOUNT_PosttestAction;
+            this.dbo_PR_CreateEmployeeTest_ROWCOUNTData.PosttestAction = null;
             this.dbo_PR_CreateEmployeeTest_ROWCOUNTData.PretestAction = null;
             this.dbo_PR_CreateEmployeeTest_ROWCOUNTData.TestAction = dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction;
+            // 
+            // testInitializeAction
+            // 
+            resources.ApplyResources(testInitializeAction, "testInitializeAction");
+            // 
+            // testCleanupAction
+            // 
+            resources.ApplyResources(testCleanupAction, "testCleanupAction");
             // 
             // rowCountCondition1
             // 
@@ -78,14 +82,6 @@ namespace DacpacDemoSQL_UnitTest
             rowCountCondition1.Name = "rowCountCondition1";
             rowCountCondition1.ResultSet = 1;
             rowCountCondition1.RowCount = 1;
-            // 
-            // testCleanupAction
-            // 
-            resources.ApplyResources(testCleanupAction, "testCleanupAction");
-            // 
-            // testInitializeAction
-            // 
-            resources.ApplyResources(testInitializeAction, "testInitializeAction");
             // 
             // dbo_PR_CreateEmployeeTest_SCALARVALUEData
             // 
@@ -97,6 +93,7 @@ namespace DacpacDemoSQL_UnitTest
             // 
             dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction.Conditions.Add(scalarValueCondition1);
             dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction.Conditions.Add(scalarValueCondition2);
+            dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction.Conditions.Add(notEmptyResultSetCondition1);
             resources.ApplyResources(dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction, "dbo_PR_CreateEmployeeTest_SCALARVALUE_TestAction");
             // 
             // scalarValueCondition1
@@ -111,15 +108,21 @@ namespace DacpacDemoSQL_UnitTest
             // 
             // scalarValueCondition2
             // 
-            scalarValueCondition2.ColumnNumber = 2;
+            scalarValueCondition2.ColumnNumber = 9;
             scalarValueCondition2.Enabled = true;
-            scalarValueCondition2.ExpectedValue = "Nick";
+            scalarValueCondition2.ExpectedValue = "70001";
             scalarValueCondition2.Name = "scalarValueCondition2";
             scalarValueCondition2.NullExpected = false;
             scalarValueCondition2.ResultSet = 1;
             scalarValueCondition2.RowNumber = 1;
             // 
-            // Test_Negative_PR_CreateEmployee
+            // notEmptyResultSetCondition1
+            // 
+            notEmptyResultSetCondition1.Enabled = true;
+            notEmptyResultSetCondition1.Name = "notEmptyResultSetCondition1";
+            notEmptyResultSetCondition1.ResultSet = 1;
+            // 
+            // SqlServerUnitTest1
             // 
             this.TestCleanupAction = testCleanupAction;
             this.TestInitializeAction = testInitializeAction;

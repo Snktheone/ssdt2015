@@ -5,12 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DacpacDemo2012", "DacpacDemo2012\DacpacDemo2012.sqlproj", "{9A032FE0-60F9-4FCC-A1DC-2556E22DCBC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DacpacDemoSQL_UnitTest", "DacpacDemoSQL_UnitTest\DacpacDemoSQL_UnitTest.csproj", "{F6933E9E-77D3-4D79-9C36-64EDD4346E91}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{656D60A3-5E75-4DD3-B227-E78E66E682A7}"
 	ProjectSection(SolutionItems) = preProject
 		MSBuild.deploy = MSBuild.deploy
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DacpacDemo_SQLUnitTest", "dbo_PR_CreateEmployee_ROWCOUNT\DacpacDemo_SQLUnitTest.csproj", "{9BA7B707-5FFA-4B24-AEB9-21DF75E0B582}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,10 @@ Global
 		{9A032FE0-60F9-4FCC-A1DC-2556E22DCBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A032FE0-60F9-4FCC-A1DC-2556E22DCBC8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A032FE0-60F9-4FCC-A1DC-2556E22DCBC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{F6933E9E-77D3-4D79-9C36-64EDD4346E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6933E9E-77D3-4D79-9C36-64EDD4346E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6933E9E-77D3-4D79-9C36-64EDD4346E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6933E9E-77D3-4D79-9C36-64EDD4346E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BA7B707-5FFA-4B24-AEB9-21DF75E0B582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BA7B707-5FFA-4B24-AEB9-21DF75E0B582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BA7B707-5FFA-4B24-AEB9-21DF75E0B582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BA7B707-5FFA-4B24-AEB9-21DF75E0B582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
