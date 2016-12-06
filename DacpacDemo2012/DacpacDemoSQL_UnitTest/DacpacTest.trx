@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="eae32eaa-6022-43ec-a81e-0e1c72fecf65" name="vagrant@VAGRANT-2012-R2 2016-11-20 01:31:25" runUser="VAGRANT-2012-R2\vagrant" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="1a02d417-6946-43d0-89bb-29577caa8931">
+    <Deployment userDeploymentRoot="C:\Users\vagrant\Source\Repos\ssdt2015\DacpacDemo2012\DacpacDemoSQL_UnitTest" useDefaultDeploymentRoot="false" runDeploymentRoot="vagrant_VAGRANT-2012-R2 2016-11-20 01_31_25" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2016-11-20T01:31:25.5423797+00:00" queuing="2016-11-20T01:31:26.6146427+00:00" start="2016-11-20T01:31:27.0316384+00:00" finish="2016-11-20T01:31:27.4593861+00:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" error="0" failed="3" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <DebugTrace>No SQL unit testing section is defined in C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MStest.exe.Config.
+</DebugTrace>
+    </Output>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="dbo_PR_CreateEmployeeTest" storage="c:\users\vagrant\source\repos\ssdt2015\dacpacdemo2012\dacpacdemosql_unittest\bin\debug\dacpacdemosql_unittest.dll" id="8c792e21-4435-6053-094d-7cca2ee64212">
+      <Execution timeOut="1800000" id="5817ebd8-34ba-4a74-8b47-2847ebaecf87" />
+      <TestMethod codeBase="C:/Users/vagrant/Source/Repos/ssdt2015/DacpacDemo2012/DacpacDemoSQL_UnitTest/bin/Debug/DacpacDemoSQL_UnitTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DacpacDemoSQL_UnitTest.Test_Negative_PR_CreateEmployee, DacpacDemoSQL_UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="dbo_PR_CreateEmployeeTest" />
+    </UnitTest>
+    <UnitTest name="TestMethod1" storage="c:\users\vagrant\source\repos\ssdt2015\dacpacdemo2012\dacpacdemosql_unittest\bin\debug\dacpacdemosql_unittest.dll" id="0ea5012b-c14e-f893-5178-44592c10d865">
+      <Execution timeOut="1800000" id="12526680-e1ff-4c9c-ab16-dd8feffa9a1a" />
+      <TestMethod codeBase="C:/Users/vagrant/Source/Repos/ssdt2015/DacpacDemo2012/DacpacDemoSQL_UnitTest/bin/Debug/DacpacDemoSQL_UnitTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DacpacDemoSQL_UnitTest.UnitTest1, DacpacDemoSQL_UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+    <UnitTest name="dbo_PR_CreateEmployeeTest" storage="c:\users\vagrant\source\repos\ssdt2015\dacpacdemo2012\dacpacdemosql_unittest\bin\debug\dacpacdemosql_unittest.dll" id="86e6151a-e13a-a2c5-644a-58ced5e2c545">
+      <Execution timeOut="1800000" id="95339bdf-513c-4c5e-ad57-b4fb9edcf591" />
+      <TestMethod codeBase="C:/Users/vagrant/Source/Repos/ssdt2015/DacpacDemo2012/DacpacDemoSQL_UnitTest/bin/Debug/DacpacDemoSQL_UnitTest.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="DacpacDemoSQL_UnitTest.Test_PR_CreateEmployee, DacpacDemoSQL_UnitTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="dbo_PR_CreateEmployeeTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8c792e21-4435-6053-094d-7cca2ee64212" executionId="5817ebd8-34ba-4a74-8b47-2847ebaecf87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86e6151a-e13a-a2c5-644a-58ced5e2c545" executionId="95339bdf-513c-4c5e-ad57-b4fb9edcf591" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ea5012b-c14e-f893-5178-44592c10d865" executionId="12526680-e1ff-4c9c-ab16-dd8feffa9a1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5817ebd8-34ba-4a74-8b47-2847ebaecf87" testId="8c792e21-4435-6053-094d-7cca2ee64212" testName="dbo_PR_CreateEmployeeTest" computerName="VAGRANT-2012-R2" startTime="2016-11-20T01:31:27.0726670+00:00" endTime="2016-11-20T01:31:27.2445311+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5817ebd8-34ba-4a74-8b47-2847ebaecf87">
+      <Output>
+        <ErrorInfo>
+          <Message>An error occurred while SQL Server unit testing settings were being read from the configuration file.  Click the test project, open the SQL Server Test Configuration dialog box from the SQL menu, add the settings to the dialog box, and rebuild the project.</Message>
+          <StackTrace>   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.OpenProcessConfig()
+   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.DeployDatabaseProject()
+   at DacpacDemoSQL_UnitTest.SqlDatabaseSetup.InitializeAssembly(TestContext ctx) in C:\Users\vagrant\Source\Repos\ssdt2015\DacpacDemo2012\DacpacDemoSQL_UnitTest\SqlDatabaseSetup.cs:line 20
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="95339bdf-513c-4c5e-ad57-b4fb9edcf591" testId="86e6151a-e13a-a2c5-644a-58ced5e2c545" testName="dbo_PR_CreateEmployeeTest" computerName="VAGRANT-2012-R2" startTime="2016-11-20T01:31:27.3187589+00:00" endTime="2016-11-20T01:31:27.3529254+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="95339bdf-513c-4c5e-ad57-b4fb9edcf591">
+      <Output>
+        <ErrorInfo>
+          <Message>An error occurred while SQL Server unit testing settings were being read from the configuration file.  Click the test project, open the SQL Server Test Configuration dialog box from the SQL menu, add the settings to the dialog box, and rebuild the project.</Message>
+          <StackTrace>   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.OpenProcessConfig()
+   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.DeployDatabaseProject()
+   at DacpacDemoSQL_UnitTest.SqlDatabaseSetup.InitializeAssembly(TestContext ctx) in C:\Users\vagrant\Source\Repos\ssdt2015\DacpacDemo2012\DacpacDemoSQL_UnitTest\SqlDatabaseSetup.cs:line 20
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="12526680-e1ff-4c9c-ab16-dd8feffa9a1a" testId="0ea5012b-c14e-f893-5178-44592c10d865" testName="TestMethod1" computerName="VAGRANT-2012-R2" startTime="2016-11-20T01:31:27.3724671+00:00" endTime="2016-11-20T01:31:27.3851566+00:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12526680-e1ff-4c9c-ab16-dd8feffa9a1a">
+      <Output>
+        <ErrorInfo>
+          <Message>An error occurred while SQL Server unit testing settings were being read from the configuration file.  Click the test project, open the SQL Server Test Configuration dialog box from the SQL menu, add the settings to the dialog box, and rebuild the project.</Message>
+          <StackTrace>   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.OpenProcessConfig()
+   at Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestService.DeployDatabaseProject()
+   at DacpacDemoSQL_UnitTest.SqlDatabaseSetup.InitializeAssembly(TestContext ctx) in C:\Users\vagrant\Source\Repos\ssdt2015\DacpacDemo2012\DacpacDemoSQL_UnitTest\SqlDatabaseSetup.cs:line 20
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

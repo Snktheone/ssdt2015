@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Vagrant")]
 [assembly: AssemblyProduct("DacpacDemoSQL_UnitTest")]
-[assembly: AssemblyCopyright("Copyright © Vagrant 2016")]
+[assembly: AssemblyCopyright("Copyright © Accedius 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
