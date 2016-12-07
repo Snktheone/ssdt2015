@@ -10,10 +10,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace dbo_PR_CreateEmployee_ROWCOUNT
 {
     [TestClass()]
-    public class SqlServerUnitTest1 : SqlDatabaseTestClass
+    public class dbo_PR_CreateEmployeeTest : SqlDatabaseTestClass
     {
 
-        public SqlServerUnitTest1()
+        public dbo_PR_CreateEmployeeTest()
         {
             InitializeComponent();
         }
@@ -38,7 +38,7 @@ namespace dbo_PR_CreateEmployee_ROWCOUNT
         private void InitializeComponent()
         {
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction dbo_PR_CreateEmployeeTest_ROWCOUNT_TestAction;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SqlServerUnitTest1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dbo_PR_CreateEmployeeTest));
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testInitializeAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.SqlDatabaseTestAction testCleanupAction;
             Microsoft.Data.Tools.Schema.Sql.UnitTesting.Conditions.RowCountCondition rowCountCondition1;

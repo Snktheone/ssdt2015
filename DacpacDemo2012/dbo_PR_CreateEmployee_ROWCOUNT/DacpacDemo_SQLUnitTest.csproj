@@ -52,7 +52,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="SqlDatabaseSetup.cs" />
-    <Compile Include="SqlServerUnitTest1.cs">
+    <Compile Include="dbo_PR_CreateEmployeeTest.cs">
       <SubType>Designer</SubType>
     </Compile>
     <Compile Include="UnitTest1.cs" />
@@ -62,8 +62,8 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SqlServerUnitTest1.resx">
-      <DependentUpon>SqlServerUnitTest1.cs</DependentUpon>
+    <EmbeddedResource Include="dbo_PR_CreateEmployeeTest.resx">
+      <DependentUpon>dbo_PR_CreateEmployeeTest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Choose>
