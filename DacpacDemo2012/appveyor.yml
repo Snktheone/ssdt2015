@@ -1,9 +1,0 @@
-services:
-  - mssql2012
-
-artifacts:
-  - path: DacpacDemo2012\bin\debug\DacpacDemo2012.dacpac
-    name: DacpacDemo2012
-
-build:
-   project:DacpacDemo2012.sln
