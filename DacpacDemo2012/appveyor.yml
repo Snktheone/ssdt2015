@@ -5,7 +5,5 @@ artifacts:
   - path: DacpacDemo2012\bin\debug\DacpacDemo2012.dacpac
     name: DacpacDemo2012
 
-deploy:
-  - provider: SqlDatabase
-    artifact: DacpacDemo2012
-    connection_string: 'Data Source=VAGRANT-2012-R2\SNKTHEONE;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True'
+build:
+   project:DacpacDemo2012.sln
