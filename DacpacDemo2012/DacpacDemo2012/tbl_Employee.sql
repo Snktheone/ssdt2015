@@ -8,5 +8,6 @@
 	[Employee_HireDate] DATETIME NOT NULL,
 	[Employee_Designation] VARCHAR(255) NOT NULL,
 	[Employee_DepartmentID] INT NOT NULL,
+	[TESTCOLUMN]  VARCHAR(255)  NULL,
 	[Employee_ManagerID] INT NOT NULL  FOREIGN KEY  REFERENCES  dbo.tbl_Employee( [EmployeeId] )
 )
